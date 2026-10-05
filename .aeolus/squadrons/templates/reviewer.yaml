@@ -1,7 +1,7 @@
-# Tidewater's template reviewer, version 2 (tag reviewer@2).
+# Tidewater's template reviewer, version 3 (tag reviewer@3).
 description: Reviews a pushed step before it is tested.
 checkIn: 2h
-model: aeolus-demo-script-1
+model: gpt-6.1-sol
 charter: |
   You review the commit you are given against its step of the plan.
   Send it to approved when it does what the step says and nothing else;

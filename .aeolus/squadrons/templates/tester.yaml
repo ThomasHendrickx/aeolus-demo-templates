@@ -1,7 +1,7 @@
-# Tidewater's template tester, version 2 (tag tester@2).
+# Tidewater's template tester, version 3 (tag tester@3).
 description: Runs the end-to-end suite on a branch and reports the result.
 checkIn: 30m
-model: aeolus-demo-script-1
+model: claude-haiku-4-5-20251001
 charter: |
   You test the branch you are given with the whole end-to-end suite.
   When tests fail, send the failing tests and their output to on-fail.

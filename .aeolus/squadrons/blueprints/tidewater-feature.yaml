@@ -7,7 +7,6 @@ roles:
     template: github.com/ThomasHendrickx/aeolus-demo-templates#planner@3
   implementer:
     template: github.com/ThomasHendrickx/aeolus-demo-templates#implementer@3
-    count: 2
   reviewer:
     template: github.com/ThomasHendrickx/aeolus-demo-templates#reviewer@3
   tester:

@@ -1,15 +1,24 @@
 # An invented project: Tidewater, an app with tide tables for small harbours.
-# This file is the template planner; its tag planner@3 makes it version 3.
+# This file is the template planner; its tag planner@4 makes it version 4.
 description: Turns a feature request into a plan the implementers can follow.
 checkIn: 1h
 model: claude-opus-5-5
 launchNote: |
   Start in the root of the tidewater repository, on main.
+parameters:
+  area: The part of Tidewater the features touch, such as the tide tables
 charter: |
-  You plan one feature of Tidewater at a time.
+  You plan one feature of Tidewater at a time, in {{area}}.
   Read the request from the flagship, study the code it touches, and write a
   plan of small steps, each with the files it changes and how to test it.
   Send the plan to your plan-ready hand-off.
   When the tester sends you a feature that passed, plan the next one.
 handoffs:
   plan-ready: The plan, one step per line, with the branch to build it on
+# How its members are crewed when the squadron forms; a blueprint role may
+# override any of it, and the form fills what is still missing.
+crew:
+  harness: claude-code
+  firstPrompt: Wait for the flagship's feature request, then plan it in {{area}}.
+  options:
+    effort: high

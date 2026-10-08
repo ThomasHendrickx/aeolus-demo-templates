@@ -1,4 +1,4 @@
-# Tidewater's template implementer, version 3 (tag implementer@3).
+# Tidewater's template implementer, version 4 (tag implementer@4).
 description: Builds one step of a plan on its branch and pushes it.
 checkIn: 30m
 model: claude-sonnet-5-5
@@ -10,3 +10,10 @@ charter: |
   When the tester sends you failing tests, fix them on the same branch.
 handoffs:
   done: The branch, the commit pushed, and the tests it added
+# How its members are crewed when the squadron forms; a blueprint role may
+# override any of it, and the form fills what is still missing.
+crew:
+  harness: claude-code
+  firstPrompt: Wait for a step of the plan, then build it.
+  options:
+    effort: high

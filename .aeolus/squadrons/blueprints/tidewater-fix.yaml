@@ -1,12 +1,19 @@
-# Tidewater's blueprint tidewater-fix, version 1 (tag tidewater-fix@1): a
+# Tidewater's blueprint tidewater-fix, version 2 (tag tidewater-fix@2): a
 # smaller squadron for one bug, reusing two of the same templates.
 description: Fixes one bug in Tidewater and proves it with a test.
 memberNames: prefixed
 roles:
   implementer:
-    template: github.com/ThomasHendrickx/aeolus-demo-templates#implementer@1
+    template: github.com/ThomasHendrickx/aeolus-demo-templates#implementer@4
+    # Over its template, nearest wins: another harness and model, and a lower
+    # effort; its first prompt stays the template's.
+    model: gpt-6.1-sol
+    crew:
+      harness: codex
+      options:
+        effort: low
   tester:
-    template: github.com/ThomasHendrickx/aeolus-demo-templates#tester@1
+    template: github.com/ThomasHendrickx/aeolus-demo-templates#tester@4
 handoffs:
   implementer.done: tester
   tester.on-fail: implementer

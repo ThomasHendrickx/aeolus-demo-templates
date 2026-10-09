@@ -1,4 +1,4 @@
-# Tidewater's blueprint tidewater-feature, version 4 (tag tidewater-feature@4).
+# Tidewater's blueprint tidewater-feature, version 5 (tag tidewater-feature@5).
 # Each role names a template by <repository>#<name>@<version>; the repository
 # is this one, as squadrons names it. Each member is crewed with its
 # template's crew settings; none names a workspace or a machine label, so
@@ -6,15 +6,15 @@
 description: Plans, builds, reviews and tests one feature of Tidewater.
 roles:
   planner:
-    template: github.com/ThomasHendrickx/aeolus-demo-templates#planner@4
+    template: github.com/ThomasHendrickx/aeolus-demo-templates#planner@5
     parameters:
       area: the tide tables
   implementer:
-    template: github.com/ThomasHendrickx/aeolus-demo-templates#implementer@4
+    template: github.com/ThomasHendrickx/aeolus-demo-templates#implementer@5
   reviewer:
-    template: github.com/ThomasHendrickx/aeolus-demo-templates#reviewer@4
+    template: github.com/ThomasHendrickx/aeolus-demo-templates#reviewer@5
   tester:
-    template: github.com/ThomasHendrickx/aeolus-demo-templates#tester@4
+    template: github.com/ThomasHendrickx/aeolus-demo-templates#tester@5
 handoffs:
   planner.plan-ready: implementer
   implementer.done: reviewer

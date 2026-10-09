@@ -1,7 +1,6 @@
-# Tidewater's template reviewer, version 4 (tag reviewer@4).
+# Tidewater's template reviewer, version 5 (tag reviewer@5).
 description: Reviews a pushed step before it is tested.
 checkIn: 2h
-model: gpt-6.1-sol
 charter: |
   You review the commit you are given against its step of the plan.
   Send it to approved when it does what the step says and nothing else;
@@ -13,6 +12,7 @@ handoffs:
 # its model; a blueprint role may override any of it.
 crew:
   harness: codex
+  model: gpt-6.1-sol
   firstPrompt: Wait for a pushed step, then review it.
   options:
     effort: medium

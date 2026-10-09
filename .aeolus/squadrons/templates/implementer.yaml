@@ -1,7 +1,6 @@
-# Tidewater's template implementer, version 4 (tag implementer@4).
+# Tidewater's template implementer, version 5 (tag implementer@5).
 description: Builds one step of a plan on its branch and pushes it.
 checkIn: 30m
-model: claude-sonnet-5-5
 launchNote: |
   Start in the root of the tidewater repository. Each step names its branch.
 charter: |
@@ -14,6 +13,7 @@ handoffs:
 # override any of it, and the form fills what is still missing.
 crew:
   harness: claude-code
+  model: claude-sonnet-5-5
   firstPrompt: Wait for a step of the plan, then build it.
   options:
     effort: high

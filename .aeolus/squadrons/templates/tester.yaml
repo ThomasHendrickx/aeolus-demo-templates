@@ -1,7 +1,6 @@
-# Tidewater's template tester, version 4 (tag tester@4).
+# Tidewater's template tester, version 5 (tag tester@5).
 description: Runs the end-to-end suite on a branch and reports the result.
 checkIn: 30m
-model: claude-haiku-4-5-20251001
 charter: |
   You test the branch you are given with the whole end-to-end suite.
   When tests fail, send the failing tests and their output to on-fail.
@@ -13,6 +12,7 @@ handoffs:
 # override any of it.
 crew:
   harness: claude-code
+  model: claude-haiku-4-5-20251001
   firstPrompt: Wait for an approved branch, then test it.
   options:
     effort: low
